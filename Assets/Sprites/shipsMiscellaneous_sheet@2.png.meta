@@ -200,7 +200,7 @@ TextureImporter:
         width: 29
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,7 +221,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,6 +229,27 @@ TextureImporter:
       bones: []
       spriteID: 67fe4b0f5e05581498049ff92fc79219
       internalID: 1412839340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipsMiscellaneous_sheet@2_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 3
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e891f9772607b428b0bb9be0685d0d
+      internalID: -1136481816
       vertices: []
       indices: 
       edges: []
@@ -249,6 +270,7 @@ TextureImporter:
       shipsMiscellaneous_sheet@2_0: -201656337
       shipsMiscellaneous_sheet@2_2: 14068733
       shipsMiscellaneous_sheet@2_1: 781003387
+      shipsMiscellaneous_sheet@2_5: -1136481816
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -6,10 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class HurtfulObject : MonoBehaviour
 {
-    [SerializeField, Min(0)] private int _damage;
+    [SerializeField, Min(0)] protected int _damage;
     public Action OnHit;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out HealthSystem _target))
         {
@@ -19,7 +19,7 @@ public class HurtfulObject : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.TryGetComponent(out HealthSystem _target))
         {

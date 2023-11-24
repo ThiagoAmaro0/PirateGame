@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private int _maxHealth;

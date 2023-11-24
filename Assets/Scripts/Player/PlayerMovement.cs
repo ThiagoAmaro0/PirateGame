@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInputActions _inputs;
     private Vector2 _movementInput;
     private float _velocity;
+    private bool _canMove;
 
     private void OnEnable()
     {
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         _inputs.Player.Move.performed += GetMoveInput;
         _inputs.Player.Move.canceled += GetMoveInput;
         _inputs.Enable();
+        CanMove(true);
     }
 
     private void FixedUpdate()
@@ -54,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateSpeed()
     {
-        if (_movementInput.y > 0 && _velocity < _maxSpeed)
+        if (_movementInput.y > 0 && _velocity < _maxSpeed && _canMove)
         {
             _velocity += _moveSpeed * Time.deltaTime;
         }
@@ -72,5 +74,10 @@ public class PlayerMovement : MonoBehaviour
     private void GetMoveInput(InputAction.CallbackContext context)
     {
         _movementInput = context.ReadValue<Vector2>();
+    }
+
+    public void CanMove(bool canMove)
+    {
+        _canMove = canMove;
     }
 }
