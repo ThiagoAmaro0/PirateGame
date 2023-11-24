@@ -9,6 +9,8 @@ public class HealthSystem : MonoBehaviour
     public Action<int> OnHealthChange;
     public Action OnDie;
 
+    public int MaxHealth { get => _maxHealth; private set => _maxHealth = value; }
+
     private void Awake()
     {
         Initialize();
@@ -16,7 +18,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Initialize()
     {
-        _currentHealth = _maxHealth;
+        _currentHealth = MaxHealth;
     }
 
     public void Hit(int damage)
