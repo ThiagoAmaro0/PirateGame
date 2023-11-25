@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDisable()
     {
+        _velocity = 0;
+        _rigidbody.velocity = Vector2.zero;
         _inputs.Disable();
     }
 

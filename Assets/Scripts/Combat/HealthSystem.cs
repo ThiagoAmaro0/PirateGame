@@ -16,9 +16,10 @@ public class HealthSystem : MonoBehaviour
         Initialize();
     }
 
-    private void Initialize()
+    public void Initialize()
     {
         _currentHealth = MaxHealth;
+        OnHealthChange?.Invoke(_currentHealth);
     }
 
     public void Hit(int damage)

@@ -21,6 +21,8 @@ public abstract class BaseEnemy : MonoBehaviour
             _agent.SetDestination(Player);
         }
     }
+    public HealthSystem Health { get => _health; set => _health = value; }
+
 
     protected virtual void Awake()
     {

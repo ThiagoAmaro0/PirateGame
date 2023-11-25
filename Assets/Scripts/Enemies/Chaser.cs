@@ -12,6 +12,6 @@ public class Chaser : BaseEnemy
 
     private void Explode()
     {
-        print("BOOM");
+
     }
 }

@@ -8,9 +8,14 @@ public class PanelState : MonoBehaviour
     [SerializeField] private GameState _state;
     [SerializeField] private GameObject _panel;
 
-    private void Awake()
+    private void OnEnable()
     {
         GameManager.instance.OnChangeState += StateListener;
+
+    }
+    private void OnDisable()
+    {
+        GameManager.instance.OnChangeState -= StateListener;
     }
 
     private void StateListener(GameState state)
