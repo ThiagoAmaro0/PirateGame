@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3509456648776193754}
   - component: {fileID: 491546847070982391}
   - component: {fileID: 3614078235570750345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1900732625554527904}
   - component: {fileID: 5949737358271047426}
   - component: {fileID: 5048601785084143479}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6137248392584599084}
   - component: {fileID: 6137248392584599085}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6137248392785498586}
   - component: {fileID: 6137248392785498585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 781003387, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  m_Sprite: {fileID: 1827600125, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6137248393267207272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,13 +389,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6137248394154831051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SailPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6137248394154831051
 Transform:
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 6137248394466160457}
   - component: {fileID: 6137248394466160468}
   - component: {fileID: 6137248394466160462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661b8c1498ec11a40a981c7a0dc9f716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 1
+  _maxHealth: 3
+  _hullSprites:
+  - {fileID: 1626537709, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 2005243119, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 1652874830, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: -201656337, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  _sailSprites:
+  - {fileID: 1833084544, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 62738592, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 1478854130, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 1827600125, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  _hullRenderer: {fileID: 6137248392584599085}
+  _sailRenderer: {fileID: 6137248392785498585}
 --- !u!114 &6137248394466160457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +574,7 @@ GameObject:
   - component: {fileID: 2489005074977486670}
   - component: {fileID: 3876164291115877427}
   - component: {fileID: 5791063621885258556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,6 +650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon
       objectReference: {fileID: 0}
+    - target: {fileID: 3132310734932257803, guid: f3e86dd75fffcb14d94daf7f75e06f5f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3132310734932257812, guid: f3e86dd75fffcb14d94daf7f75e06f5f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -681,6 +697,14 @@ PrefabInstance:
     - target: {fileID: 3132310734932257812, guid: f3e86dd75fffcb14d94daf7f75e06f5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132310736718547242, guid: f3e86dd75fffcb14d94daf7f75e06f5f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132310736718547252, guid: f3e86dd75fffcb14d94daf7f75e06f5f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e86dd75fffcb14d94daf7f75e06f5f, type: 3}

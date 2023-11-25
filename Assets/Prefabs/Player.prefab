@@ -246,12 +246,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8044232534606886750}
   - component: {fileID: 2893464520112956858}
+  - component: {fileID: 8368755660171332646}
   - component: {fileID: 8044232534606886744}
   - component: {fileID: 8044232534606886748}
   - component: {fileID: 5558121797981390286}
   - component: {fileID: 8044232534606886749}
   - component: {fileID: 1535790108546799103}
-  - component: {fileID: 8368755660171332646}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -291,6 +291,31 @@ MonoBehaviour:
   _playerCombat: {fileID: 8044232534606886744}
   _playerMovement: {fileID: 8044232534606886748}
   _healthSystem: {fileID: 8368755660171332646}
+--- !u!114 &8368755660171332646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044232534606886721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 661b8c1498ec11a40a981c7a0dc9f716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 6
+  _hullSprites:
+  - {fileID: 1626537709, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 2005243119, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 1652874830, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: -201656337, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  _sailSprites:
+  - {fileID: -1046883575, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 508656223, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: -882271278, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 781003387, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  _hullRenderer: {fileID: 8044232534487727418}
+  _sailRenderer: {fileID: 8044232533747375626}
 --- !u!114 &8044232534606886744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,19 +409,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &8368755660171332646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8044232534606886721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661b8c1498ec11a40a981c7a0dc9f716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 5
 --- !u!1 &8044232534610396787
 GameObject:
   m_ObjectHideFlags: 0

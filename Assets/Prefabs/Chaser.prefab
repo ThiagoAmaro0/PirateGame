@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7549821700610276438}
   - component: {fileID: 7549821700610276437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 781003387, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  m_Sprite: {fileID: -501330130, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7549821700677811104}
   - component: {fileID: 7549821700677811105}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7549821701094076900}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,13 +210,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7549821701976441159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SailPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7549821701976441159
 Transform:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 7549821702554108613}
   - component: {fileID: 7549821702554108632}
   - component: {fileID: 7549821702554108610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661b8c1498ec11a40a981c7a0dc9f716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 1
+  _maxHealth: 2
+  _hullSprites:
+  - {fileID: 1626537709, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 2005243119, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 1652874830, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: -201656337, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  _sailSprites:
+  - {fileID: -180386535, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 1052497823, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: 6015221, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  - {fileID: -501330130, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
+  _hullRenderer: {fileID: 7549821700677811105}
+  _sailRenderer: {fileID: 7549821700610276437}
 --- !u!114 &7549821702554108613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +406,18 @@ PrefabInstance:
     - target: {fileID: 342629117510389227, guid: e4aad271d2435e94f90e7ecdd9dbd1bf, type: 3}
       propertyPath: m_Name
       value: ShipCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 342629117510389227, guid: e4aad271d2435e94f90e7ecdd9dbd1bf, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947810548231852961, guid: e4aad271d2435e94f90e7ecdd9dbd1bf, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006068004719998728, guid: e4aad271d2435e94f90e7ecdd9dbd1bf, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8465438607824395364, guid: e4aad271d2435e94f90e7ecdd9dbd1bf, type: 3}
       propertyPath: m_Pivot.x
