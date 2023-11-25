@@ -16,7 +16,7 @@ public class PathFinderAgent : MonoBehaviour
     private const float MIN_DISTANCE = 0.3f;
 
     public Vector2 Velocity => _rb.velocity;
-    public bool IsStoppedByDistance => Vector2.Distance(transform.position, _target.position) <= _stopDistance;
+    public bool IsStoppedByDistance => _target ? Vector2.Distance(transform.position, _target.position) <= _stopDistance : false;
 
     public PathfinderGrid Grid { get => _grid; set => _grid = value; }
 
@@ -52,9 +52,12 @@ public class PathFinderAgent : MonoBehaviour
 
     public void Stop()
     {
-        StopCoroutine(_repathCoroutine);
-        _target = null;
-        _path = new List<GridNode>() { _grid.GetNodeFromWorldPosition(transform.position) };
+        if (gameObject)
+        {
+            StopCoroutine(_repathCoroutine);
+            _target = null;
+            _path = null;
+        }
     }
 
     private IEnumerator Repath()

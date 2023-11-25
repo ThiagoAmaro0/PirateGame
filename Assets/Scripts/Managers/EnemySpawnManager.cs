@@ -18,7 +18,6 @@ public class EnemySpawnManager : MonoBehaviour
     private void Awake()
     {
         _enemies = new List<BaseEnemy>();
-        _player.HealthSystem.OnDie += GameOver;
     }
 
     private void Update()
@@ -31,9 +30,13 @@ public class EnemySpawnManager : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         _running = false;
+        foreach (BaseEnemy enemy in _enemies)
+        {
+            enemy.Stop();
+        }
     }
 
     private void Spawn()

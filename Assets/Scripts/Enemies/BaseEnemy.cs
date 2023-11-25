@@ -38,4 +38,9 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void Stop()
+    {
+        _agent.Stop();
+    }
 }
