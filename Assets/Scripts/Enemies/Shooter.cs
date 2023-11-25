@@ -12,7 +12,7 @@ public class Shooter : BaseEnemy
     {
         if (_agent.IsStoppedByDistance)
         {
-            Vector2 dir = (_player.position - transform.position).normalized;
+            Vector2 dir = (Player.position - transform.position).normalized;
             _visual.rotation = Quaternion.LookRotation(Vector3.forward, dir);
             if (Time.time >= _fireTime)
             {

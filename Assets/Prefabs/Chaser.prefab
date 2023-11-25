@@ -288,7 +288,7 @@ MonoBehaviour:
   _grid: {fileID: 0}
   _repathDelay: 0.5
   _rb: {fileID: 7549821702554108632}
-  _speed: 5
+  _speed: 4
   _stopDistance: 0
 --- !u!114 &7549821702554108614
 MonoBehaviour:
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c1b6a483f55de4d8bc135156c63b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  player: {fileID: 0}
   _agent: {fileID: 7549821702554108636}
   _health: {fileID: 7549821702554108612}
   _visual: {fileID: 7549821701094076900}

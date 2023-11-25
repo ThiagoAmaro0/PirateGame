@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private HealthSystem _healthSystem;
 
+    public HealthSystem HealthSystem => _healthSystem;
+
     private void Awake()
     {
         _healthSystem.OnDie += Die;

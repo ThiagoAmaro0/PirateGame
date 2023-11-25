@@ -17,6 +17,9 @@ public class PathFinderAgent : MonoBehaviour
 
     public Vector2 Velocity => _rb.velocity;
     public bool IsStoppedByDistance => Vector2.Distance(transform.position, _target.position) <= _stopDistance;
+
+    public PathfinderGrid Grid { get => _grid; set => _grid = value; }
+
     private void FixedUpdate()
     {
         if (_path == null) return;
