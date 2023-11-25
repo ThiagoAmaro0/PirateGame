@@ -35,7 +35,10 @@ public class EnemySpawnManager : MonoBehaviour
         _running = false;
         foreach (BaseEnemy enemy in _enemies)
         {
-            enemy.Stop();
+            if (enemy)
+            {
+                enemy.Stop();
+            }
         }
     }
 
