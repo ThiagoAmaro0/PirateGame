@@ -162,9 +162,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8044232534487727421}
   - component: {fileID: 8044232534487727418}
-  - component: {fileID: 5270486313346456695}
-  - component: {fileID: 4578392760890757359}
-  - component: {fileID: 711323511}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -239,56 +236,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5270486313346456695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8044232534487727420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661b8c1498ec11a40a981c7a0dc9f716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 5
---- !u!70 &4578392760890757359
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8044232534487727420}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1.08}
-  m_Direction: 0
---- !u!50 &711323511
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8044232534487727420}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &8044232534606886721
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +250,8 @@ GameObject:
   - component: {fileID: 8044232534606886748}
   - component: {fileID: 5558121797981390286}
   - component: {fileID: 8044232534606886749}
+  - component: {fileID: 1535790108546799103}
+  - component: {fileID: 8368755660171332646}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -341,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerCombat: {fileID: 8044232534606886744}
   _playerMovement: {fileID: 8044232534606886748}
-  _healthSystem: {fileID: 5270486313346456695}
+  _healthSystem: {fileID: 8368755660171332646}
 --- !u!114 &8044232534606886744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bd38bc6304dd947a5ac32f75795426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 4578392760890757359}
+  _collider: {fileID: 1535790108546799103}
   _frontCannon: {fileID: 8044232533961996863}
   _rightCannons:
   - {fileID: 4961540559750045135}
@@ -396,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d263be2b1a92a9249999f24dfde6f162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthSystem: {fileID: 5270486313346456695}
+  _healthSystem: {fileID: 8368755660171332646}
   _healthBarImage: {fileID: 787983858559733545}
 --- !u!50 &8044232534606886749
 Rigidbody2D:
@@ -419,6 +368,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &1535790108546799103
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044232534606886721}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &8368755660171332646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044232534606886721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 661b8c1498ec11a40a981c7a0dc9f716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 5
 --- !u!1 &8044232534610396787
 GameObject:
   m_ObjectHideFlags: 0
