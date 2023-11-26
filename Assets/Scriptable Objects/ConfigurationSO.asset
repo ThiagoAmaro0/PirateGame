@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397c6cf214f1a024ab5e8d779619825e, type: 3}
   m_Name: ConfigurationSO
   m_EditorClassIdentifier: 
-  _gameDuration: 3
-  _spawnDelay: 3
+  _minDuration: 60
+  _maxDuration: 180
+  _minDelay: 1
+  _maxDelay: 30

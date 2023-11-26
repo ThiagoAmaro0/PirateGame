@@ -25,7 +25,7 @@ public class SessionManager : MonoBehaviour
     {
         if (state == GameState.GAME)
         {
-            _endTime = 60 * _levelConfig.GameDuration + Time.time;
+            _endTime = _levelConfig.GameDuration + Time.time;
             _gameOver = false;
         }
         else if (state == GameState.WIN || state == GameState.LOSE)
@@ -36,7 +36,7 @@ public class SessionManager : MonoBehaviour
 
     private void Awake()
     {
-        _endTime = 60 * _levelConfig.GameDuration + Time.time;
+        _endTime = _levelConfig.GameDuration + Time.time;
     }
 
     private void Update()
