@@ -12,6 +12,8 @@ public class Cannon : MonoBehaviour
         cannonBall.transform.position = transform.position;
         cannonBall.SetOwner(ownerCollider);
         cannonBall.Fire(transform.up);
+
+
     }
 
     public void Fire(Collider2D ownerCollider, float delay)

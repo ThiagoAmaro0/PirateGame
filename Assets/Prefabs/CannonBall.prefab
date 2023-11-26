@@ -52,6 +52,7 @@ MonoBehaviour:
   _rb: {fileID: 7519239032511697967}
   _collider: {fileID: 7519239032511697966}
   _lifeTime: 5
+  _explosionPrefab: {fileID: 3199507670045682464, guid: 9f86f4737f6274a4591244078b215acc, type: 3}
 --- !u!212 &7519239032511697960
 SpriteRenderer:
   m_ObjectHideFlags: 0

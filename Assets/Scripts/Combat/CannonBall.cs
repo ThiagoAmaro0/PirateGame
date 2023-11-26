@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,12 @@ public class CannonBall : HurtfulObject
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Collider2D _collider;
     [SerializeField] private float _lifeTime = 5;
+    [SerializeField] private GameObject _explosionPrefab;
+
+    private void Explosion()
+    {
+        Destroy(Instantiate(_explosionPrefab, transform.position, Quaternion.identity), 0.5f);
+    }
 
     public void SetOwner(Collider2D owner)
     {
@@ -16,6 +23,7 @@ public class CannonBall : HurtfulObject
 
     public void Fire(Vector2 direction)
     {
+        OnHit += Explosion;
         transform.up = direction;
         _rb.velocity = transform.up * _speed;
         Destroy(gameObject, _lifeTime);

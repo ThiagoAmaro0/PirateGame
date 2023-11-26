@@ -316,6 +316,7 @@ MonoBehaviour:
   - {fileID: 781003387, guid: f2dfefa9f478cc3479c20981ff5d7900, type: 3}
   _hullRenderer: {fileID: 8044232534487727418}
   _sailRenderer: {fileID: 8044232533747375626}
+  _explosionPrefab: {fileID: 2379632026592607149, guid: 0a70a0812e3b8c24e9e948b68a20f163, type: 3}
 --- !u!114 &8044232534606886744
 MonoBehaviour:
   m_ObjectHideFlags: 0
