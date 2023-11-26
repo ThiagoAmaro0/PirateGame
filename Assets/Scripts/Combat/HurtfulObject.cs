@@ -21,6 +21,8 @@ public class HurtfulObject : MonoBehaviour
         }
         else if (other.TryGetComponent(out HurtfulObject hurtful))
         {
+            if (TryGetComponent(out HealthSystem _this))
+                return;
             OnHit?.Invoke();
             Explosion();
             Destroy(gameObject);
@@ -38,9 +40,12 @@ public class HurtfulObject : MonoBehaviour
         }
         else if (other.transform.TryGetComponent(out HurtfulObject hurtful))
         {
+            if (TryGetComponent(out HealthSystem _this))
+                return;
             OnHit?.Invoke();
             Explosion();
             Destroy(gameObject);
+
         }
     }
 
